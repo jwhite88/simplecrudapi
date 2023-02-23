@@ -1,9 +1,11 @@
 import './App.css';
+import GetPosts from './components/GetPosts';
 
 function App() {
   return (
     <div className="App">
-      <div className="h1">Simple CRUD API Using JSON Placeholder</div>
+      <h1>Simple CRUD API Using JSON Placeholder</h1>
+      <GetPosts />
     </div>
   );
 }
