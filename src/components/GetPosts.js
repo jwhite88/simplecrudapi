@@ -5,7 +5,7 @@ export default function GetPosts() {
     const [posts, setPosts] = useState([]);
 
     const getPosts = async () => { 
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+        const response = await fetch(process.env.REACT_APP_API_URL);
         const data = await response.json();
         setPosts(data);
     }
@@ -15,7 +15,7 @@ export default function GetPosts() {
     }, []);
 
   return (
-    <div>
+    <div style={{paddingBottom: "5rem"}}>
         <h2>Get Posts</h2>
         {posts.map((post) => (
             <div key={post.id}>
